@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Website Sekolah</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0; padding: 0;
+      background: #f5f7fa;
+    }
+    header {
+      background: #2c3e50;
+      color: white;
+      padding: 15px;
+      text-align: center;
+    }
+    nav {
+      background: #34495e;
+      display: flex;
+      justify-content: center;
+    }
+    nav a {
+      color: white;
+      padding: 14px 20px;
+      text-decoration: none;
+    }
+    nav a:hover {
+      background: #2ecc71;
+    }
+    .container {
+      padding: 20px;
+    }
+    .section {
+      display: none;
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+    }
+    th, td {
+      border: 1px solid #ddd;
+      padding: 8px;
+      text-align: center;
+    }
+    th {
+      background: #2ecc71;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Website Sekolah SMK Trisakti</h1>
+  </header>
+  <nav>
+    <a href="#" onclick="showSection('info')">Info Sekolah</a>
+    <a href="#" onclick="showSection('siswa')">Data Siswa</a>
+    <a href="#" onclick="showSection('nilai')">Nilai Akademik</a>
+    <a href="#" onclick="showSection('bayar')">Pembayaran</a>
+    <a href="#" onclick="showSection('raport')">Hasil Raport</a>
+  </nav>
+
+  <div class="container">
+    <!-- Info Sekolah -->
+    <div id="info" class="section">
+      <h2>Info Sekolah</h2>
+      <p>SMK Trisakti Modo adalah sekolah menengah kejuruan yang berlokasi di Kecamatan Modo, Kabupaten Lamongan. Sekolah ini memiliki visi mencetak lulusan yang berkarakter, terampil, dan siap bersaing di dunia kerja maupun melanjutkan ke jenjang pendidikan yang lebih tinggi. Dengan berbagai jurusan keahlian seperti Teknik Komputer dan Jaringan, Agrobisnis Pengolahan Hasil Pertanian, Desain Komunikasi Visual, SMK Trisakti Modo berkomitmen memberikan pendidikan berkualitas serta menyiapkan generasi muda yang berdaya saing dan berprestasi.</p>
+    </div>
+
+    <!-- Data Siswa -->
+    <div id="siswa" class="section">
+      <h2>Data Siswa</h2>
+      <table>
+        <tr><th>NIS</th><th>Nama</th><th>Kelas</th></tr>
+        <tr><td>001</td><td>Raca Agustian P</td><td>X TKJ</td></tr>
+        <tr><td>002</td><td>M Zaenal Arifin</td><td>X TKJ</td></tr>
+        <tr><td>003</td><td>Andre Firmanta E.H</td><td>X TKJ</td></tr>
+      </table>
+    </div>
+
+    <!-- Nilai Akademik -->
+    <div id="nilai" class="section">
+      <h2>Nilai Akademik</h2>
+      <table>
+        <tr><th>Nama</th><th>Matematika</th><th>B. Indonesia</th><th>IPA</th><th>IPS</th></tr>
+        <tr><td>M Zaenal Arifin</td><td>95</td><td>90</td><td>99</td><td>90</td></tr>
+        <tr><td>Raca Agustian P</td><td>92</td><td>87</td><td>90</td><td>85</td></tr>
+      </table>
+    </div>
+
+    <!-- Pembayaran -->
+    <div id="bayar" class="section">
+      <h2>Data Pembayaran</h2>
+      <table>
+        <tr><th>Nama</th><th>Bulan</th><th>Status</th></tr>
+        <tr><td>M Zaenal A</td><td>September</td><td>Lunas</td></tr>
+        <tr><td>Raca Agustian P</td><td>September</td><td>Belum</td></tr>
+      </table>
+    </div>
+
+    <!-- Hasil Raport -->
+    <div id="raport" class="section">
+      <h2>Hasil Raport</h2>
+      <table>
+        <tr><th>Nama</th><th>Rata-rata Nilai</th><th>Predikat</th></tr>
+        <tr><td>Budi Santoso</td><td>90</td><td>Sangat Baik</td></tr>
+        <tr><td>Siti Aminah</td><td>86</td><td>Baik</td></tr>
+      </table>
+    </div>
+  </div>
+
+  <script>
+    function showSection(id) {
+      let sections = document.querySelectorAll('.section');
+      sections.forEach(sec => sec.style.display = 'none');
+      document.getElementById(id).style.display = 'block';
+    }
+    // default tampil info sekolah
+    showSection('info');
+  </script>
+</body>
+</html>
